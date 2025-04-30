@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encoded-polyline-api</title>
+    <style>
+        * {
+            font-family: monospace;
+            --dgray: rgb(44, 44, 44);
+            --lgray: rgb(218, 218, 218);
+        }
+
+        body {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .path {
+            background-color: var(--dgray);
+            color: white;
+            margin-left: 0.25em;
+            border-radius: 0.5em;
+            padding: 0.25em;
+            display: inline;
+            width:auto;
+        }
+
+        .method {
+            border-radius: 0.5em;
+            padding: 0.25em;
+        }
+
+        .method.post {
+            background-color: rgb(80, 184, 253);
+            color: var(--dgray);
+        }
+
+        .code {
+            border-radius: 0.5em;
+            padding: 0.5em;
+            background-color: var(--lgray);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello! Welcome to my polyline conversion API.</h1>
+
+    <% endpoints.forEach(endpoint => { %>
+        <%- include('partials/endpoint', endpoint) %>
+    <% }) %>
+</body>
+</html>

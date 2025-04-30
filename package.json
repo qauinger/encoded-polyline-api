@@ -1,0 +1,30 @@
+{
+    "name": "encoded-polyline-api",
+    "version": "1.0.0",
+    "description": "An API for encoding and decoding using Google's Encoded Polyline Algorithm Format",
+    "main": "api.js",
+    "scripts": {
+        "dev": "ts-node-dev --respawn src/api.ts",
+        "build": "tsc",
+        "start": "node dist/api.js"
+    },
+    "keywords": [],
+    "author": "qauinger",
+    "license": "ISC",
+    "dependencies": {
+        "@types/ejs": "^3.1.5",
+        "dotenv": "^16.5.0",
+        "ejs": "^3.1.10",
+        "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.1",
+        "@types/node": "^22.15.3",
+        "eslint": "^9.22.0",
+        "nodemon": "^3.1.9",
+        "prettier": "^3.5.3",
+        "ts-node": "^10.9.2",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.8.3"
+    }
+}

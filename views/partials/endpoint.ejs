@@ -1,0 +1,36 @@
+<div class="endpoint">
+    <hr>
+    <h2><span class="method <%= method.toLowerCase() %>"><%= method %></span><span class="path"><%= path %></span></h2>
+    <% if (description) { %>
+        <p><%= description %></p>
+    <% } %>
+    <% if (typeof parameters !== 'undefined' && parameters.length) { %>
+        <h3>Parameters</h3>
+        <% parameters.forEach(param => { %>
+            <p><%= param %></p>
+        <% }) %>
+    <% } %>
+    <% if (typeof parameters_ex !== 'undefined') { %>
+        <pre class="code"><code><%= path %>?<%- parameters_ex %></code></pre>
+    <% } %>
+    <% if (body) { %>
+        <h3>Body</h3>
+        <p><%= body %></p>
+    <% } %>
+    <% if (typeof body_ex === 'string') { %>
+        <pre class="code"><code><%- body_ex %></code></pre>
+    <% } else if (typeof body_ex === 'object') { %>
+        <% body_ex.forEach(ex => { %>
+            <pre class="code"><code><%- ex %></code></pre>
+        <% }); %>
+    <% } %>
+    <% if (typeof out_ex === 'string') { %>
+        <h3>Output</h3>
+        <pre class="code"><code><%- out_ex %></code></pre>
+    <% } else if (typeof out_ex === 'object') { %>
+        <h3>Output</h3>
+        <% out_ex.forEach(ex => { %>
+            <pre class="code"><code><%- ex %></code></pre>
+        <% }); %>
+    <% } %>
+</div>
